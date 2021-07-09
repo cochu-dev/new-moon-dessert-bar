@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee|Mukta+Malar:300,400,600|Slabo+27px");
+html {
+  font-family: "Mukta Malar";
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+div.container {
+  text-align: center;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 100%;
+  z-index: -100;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.index-page {
+  background-color: #edeae8;
+}
+
+.container-fluid {
+  height: 100%;
+  padding: 0;
+}
+
+.my-btn {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
+  border-color: rgba(255, 255, 255, 0.3);
+  padding: 1em;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 3px 0px rgba(0, 0, 0, 0.3), 1px 1px 1px rgba(0, 0, 0, 0.1) inset;
+          box-shadow: 0 3px 0px rgba(0, 0, 0, 0.3), 1px 1px 1px rgba(0, 0, 0, 0.1) inset;
+  font-size: 1.2rem;
+  margin: 20px;
+}
+
+.my-btn:hover {
+  background-color: OliveDrab;
+  color: white;
+}
+
+.my-floating-btn {
+  display: none;
+  top: 90%;
+  width: 100%;
+  position: fixed;
+}
+
+.my-floating-btn a {
+  color: black;
+  text-decoration: none;
+}
+
+.my-floating-btn button {
+  float: right;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.my-floating-btn.active {
+  display: block;
+}
+
+#logInModal .modal-body h3 {
+  color: OliveDrab;
+  text-align: center;
+}
+
+#logInModal .modal-footer a {
+  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.video-container-bg {
+  position: relative;
+  height: 100%;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.navbar .dropdownicon {
+  color: OliveDrab;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  border: 1px;
+  color: OliveDrab;
+  text-align: left;
+  text-shadow: 1px 1.2px 2px GhostWhite;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+.navbar a:active {
+  color: Beige;
+}
+
+.navbar-container {
+  margin-top: 70px;
+  border-bottom: 1px solid grey;
+  width: 658px;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    width: 100%;
+  }
+}
+
+.sectionMain {
+  text-align: center;
+  margin-top: 20%;
+  position: relative;
+}
+
+.sectionMain h1 {
+  font-family: "Ink Free";
+  font-size: 4rem;
+}
+
+.sectionMain h2 {
+  font-family: "Slabo";
+  font-size: 1rem;
+}
+
+.sectionMain h3 {
+  color: OliveDrab;
+  font-size: 1.2rem;
+}
+
+#btn-home-login:before {
+  font-family: 'FontAwesome';
+  content: '\f2be';
+}
+
+.sectionMenu {
+  margin-top: 12%;
+}
+
+.sectionMenu .row {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.sectionMenu .my-img-class {
+  margin: 5%;
+  padding: 1%;
+  border: 1px solid grey;
+}
+
+.sectionMenu img {
+  width: 100%;
+}
+
+.sectionMenu h1 {
+  margin-top: 5%;
+  text-align: center;
+  color: OliveDrab;
+}
+
+.sectionMenu h3 {
+  text-align: center;
+  color: OliveDrab;
+}
+
+.sectionSource {
+  text-align: center;
+}
+
+.sectionSource h2 {
+  margin-top: 10%;
+}
+
+.sectionDocumentation {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.sectionDocumentation h2 {
+  margin-top: 5%;
+}
+
+.sectionDocumentation img {
+  margin: auto;
+  padding: 10px;
+}
+/*# sourceMappingURL=style.css.map */

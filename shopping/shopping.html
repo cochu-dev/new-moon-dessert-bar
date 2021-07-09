@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+<?php
+require_once 'connection.php';
+$conn = connectMysql();
+session_start();
+?>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>New Moon Dessert Bar</title>
+
+        <!-- Bootstrap CSS -->
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="styleshee t">
+        <!--=== Main Style CSS ===-->
+    <link href="style.css" rel="stylesheet">
+    <!-- Font Awesome styles CDN Link -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+</head>
+
+<body class="shopping_body">
+
+    <?php include 'header_logout.php' ?>
+
+    <div id="wrapper">
+
+        <section class="menu_gallery">
+            
+             <h2>| · Click on the picture to add to the cart · |</h2>
+             <?php 
+             $products = getAllProducts($conn); 
+                  foreach ($products as $product): ?>
+                    <a class="imgDiv" href="addToCart.php?<?=$product['Product_ID']?>">
+                        <img class="imgItem" src="img/<?= $product['Product_Name']; ?>.jpg" alt="<?=$product['Product_Name']?>">
+                        <p><?= $product['Product_Name']; ?></p>
+                        <p class="price">&dollar;<?= $product['Product_Price']; ?></p>
+                    </a>
+                  <?php endforeach; 
+            ?> 
+           </section>
+        
+    </div>
+<?php include 'footer.php' ?>
+
+
+
+</body>
+
+</html>
