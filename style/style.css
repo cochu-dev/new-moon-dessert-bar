@@ -260,4 +260,30 @@ video {
   margin: auto;
   padding: 10px;
 }
+
+.sectionShopping .row {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.sectionShopping .my-img-class {
+  margin: 5%;
+  padding: 1%;
+  border: 1px solid grey;
+}
+
+.sectionShopping img {
+  width: 100%;
+}
+
+.sectionShopping h1 {
+  margin-top: 5%;
+  text-align: center;
+  color: OliveDrab;
+}
+
+.sectionShopping h3 {
+  text-align: center;
+  color: OliveDrab;
+}
 /*# sourceMappingURL=style.css.map */

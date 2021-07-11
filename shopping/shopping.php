@@ -31,7 +31,7 @@
 
   <div class="container-fluid">
 
-    <div class="sectionMenu" id="index-sectionMenu">
+    <div class="sectionShopping">
       <div class="row">
         <div class="col-sm-12">
           <h1> Shopping </h1>
