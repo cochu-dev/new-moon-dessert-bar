@@ -9,3 +9,15 @@ window.onscroll = function()
         floatingButton.className ="my-floating-btn active";
     }
 };
+
+var zoomIn = document.getElementById('zoomIn');
+var imgItem = document.getElementById('imgItem');
+
+function showBgImg(e) {
+    zoomIn.style.display = 'block';
+    imgItem.src = e.src;
+}
+
+imgItem.onclick = function() {
+    zoomIn.style.display = 'none';
+}

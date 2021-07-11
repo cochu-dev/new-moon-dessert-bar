@@ -36,6 +36,60 @@ video {
   padding: 0;
 }
 
+#zoomIn {
+  display: none;
+  z-index: 100;
+}
+
+.zoomIn {
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+.zoomIn img {
+  -webkit-animation-name: zoom_in;
+          animation-name: zoom_in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  display: block;
+  padding: 10px;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+@-webkit-keyframes zoom_in {
+  from {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom_in {
+  from {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .my-btn {
   background-color: rgba(255, 255, 255, 0.3);
   color: black;
@@ -153,10 +207,6 @@ video {
   content: '\f2be';
 }
 
-.sectionMenu {
-  margin-top: 12%;
-}
-
 .sectionMenu .row {
   padding-left: 20%;
   padding-right: 20%;
@@ -188,16 +238,18 @@ video {
 }
 
 .sectionSource h2 {
-  margin-top: 10%;
+  margin-top: 3%;
+  color: OliveDrab;
 }
 
 .sectionDocumentation {
-  margin-top: 10%;
+  margin-top: 3%;
   text-align: center;
 }
 
 .sectionDocumentation h2 {
   margin-top: 5%;
+  color: OliveDrab;
 }
 
 .sectionDocumentation img {
