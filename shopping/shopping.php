@@ -53,14 +53,17 @@
         </div>
         <?php endforeach; ?> 
       </div>
-      
-
-
     </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+          <div class="footer">
+            <p> @ Created by KCHU · 2021 </p>
+          </div>
+        </div>
+      </div>
   </div>
-
-
-
+  
 </body>
 
 </html>
