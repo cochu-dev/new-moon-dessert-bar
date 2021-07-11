@@ -38,67 +38,23 @@
           <p>| · Click on the picture to add to the cart · |</p>
         </div>
       </div>
-      <?php 
-            $products = getAllProducts($conn); 
-                foreach ($products as $product): ?>
+      
       <div class="row">
-        <div class="col-sm-12 col-lg-6 col-xl-3">
-          <a class="imgDiv" href="addToCart.php?<?=$product['Product_ID']?>">
-              <img class="imgItem" src="img/<?= $product['Product_Name']; ?>.jpg" alt="<?=$product['Product_Name']?>">
-              <p><?= $product['Product_Name']; ?></p>
-              <p class="price">&dollar;<?= $product['Product_Price']; ?></p>
-          </a>
-        </div>
-      <?php endforeach; ?> 
-        <!-- <div class="col-sm-12 col-lg-6 col-xl-3">
-          <div class="my-img-class">
-            <img class="imgItem" src="../img/applePie.jpg" >
-            <h3>ApplePie</h3>
-          </div>
-        </div>
+        <?php 
+            $products = getAllProducts($conn); 
+            foreach ($products as $product): 
+        ?>
         <div class="col-sm-12 col-lg-6 col-xl-3">
           <div class="my-img-class">
-            <img class="imgItem" src="../img/cakes.jpg" >
-            <h3>Cakes</h3>
+            <img class="imgItem" src="../img/<?= $product['Product_Name']; ?>.jpg" alt="<?=$product['Product_Name']?>">
+            <p><?= $product['Product_Name']; ?></p> 
+            <p class="price">&dollar;<?= $product['Product_Price']; ?></p>
           </div>
         </div>
-        <div class="col-sm-12 col-lg-6 col-xl-3">
-          <div class="my-img-class">
-            <img class="imgItem" src="../img/cookies.jpg" >
-            <h3>Cookies</h3>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-6 col-xl-3">
-          <div class="my-img-class">
-            <img class="imgItem" src="../img/croissants.jpg" >
-            <h3>Croissants</h3>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-6 col-xl-3">
-          <div class="my-img-class">
-            <img class="imgItem" src="../img/cupcakes.jpg" >
-            <h3>Cupcakes</h3>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-6 col-xl-3">
-          <div class="my-img-class">
-            <img class="imgItem" src="../img/iceCream.jpg" >
-            <h3>IceCream</h3>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-6 col-xl-3">
-          <div class="my-img-class">
-            <img class="imgItem" src="../img/pancake.jpg" >
-            <h3>Pancake</h3>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-6 col-xl-3">
-          <div class="my-img-class">
-            <img class="imgItem" src="../img/pudding.jpg" >
-            <h3>Pudding</h3>
-          </div>
-        </div> -->
+        <?php endforeach; ?> 
       </div>
+      
+
 
     </div>
   </div>
