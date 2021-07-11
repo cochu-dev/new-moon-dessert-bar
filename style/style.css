@@ -35,7 +35,7 @@ video {
   background-color: #edeae8;
 }
 
-.container-fluid {
+.index-page .container-fluid {
   height: 100%;
   padding: 0;
 }
@@ -96,6 +96,11 @@ video {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+
+.shopping_body .container-fluid {
+  min-height: 100%;
+  padding: 0;
 }
 
 .footer {
