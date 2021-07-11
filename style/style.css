@@ -2,12 +2,16 @@
 html {
   font-family: "Mukta Malar";
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   padding: 0;
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 div.container {
@@ -92,6 +96,18 @@ video {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+  padding: 1vh;
+  background-color: grey;
+}
+
+.footer p {
+  margin: auto;
 }
 
 .my-btn {
