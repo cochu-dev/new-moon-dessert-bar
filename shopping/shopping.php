@@ -45,23 +45,16 @@
             foreach ($products as $product): 
         ?>
         <div class="col-sm-12 col-lg-6 col-xl-3">
-          <div class="my-img-class">
+          <a class="my-img-class" href="addToCart.php?<?=$product['Product_ID']?>">
             <img class="imgItem" src="../img/<?= $product['Product_Name']; ?>.jpg" alt="<?=$product['Product_Name']?>">
             <p><?= $product['Product_Name']; ?></p> 
             <p class="price">&dollar;<?= $product['Product_Price']; ?></p>
-          </div>
+          </a>
         </div>
         <?php endforeach; ?> 
       </div>
     </div>
 
-    <!-- <div class="row">
-      <div class="col-sm-12">
-        <div class="footer">
-          <p> @ Created by KCHU · 2021 </p>
-        </div>
-      </div>
-    </div> -->
   </div>
 
 </body>

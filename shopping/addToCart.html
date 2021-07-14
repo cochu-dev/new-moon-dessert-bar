@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>New Moon Dessert Bar</title>
+
+    <!--=== Main Style CSS ===-->
+    <link href="style.css" rel="stylesheet">
+    <!-- Font Awesome styles CDN Link -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+</head>
+
+<body class="shopping_body">
+
+
+    <div id="wrapper">
+
+        <?php 
+            $products = getProducts($_SERVER["QUERY_STRING"],$conn); 
+            foreach ($products as $product): 
+        ?>
+
+        <section class="shopping_cart">
+            <h1>Shopping Cart</h1>
+            <form action="addingToCart.php" method="get">
+
+                <img src="img/<?= $product['Product_Img'];?>" style="width: 300px; height: 100%; padding:10px; border: 1px solid black;">
+                <h2 style="font-size: 40px;text-transform: uppercase; "><?=$product['Product_Name']?></h2>
+                <h2>Price: &dollar;<?=$product['Product_Price']?></h3>
+
+                <h3>Quantity: <input type="number" name="quantity" value="1" min="1" max="20" placeholder="Quantity" required>
+
+                <input type="submit" value="Add To Cart"></h3>
+
+                <input type="hidden" name="product_id" value="<?=$product['Product_ID']?>">
+                <input type="hidden" name="product_name" value="<?=$product['Product_Name']?>">
+                <input type="hidden" name="product_price" value="<?=$product['Product_Price']?>">
+
+            </form>
+        </section>
+
+        <?php             
+            endforeach; ?>
+      
+        <?php 
+            
+            
+        ?>
+    </div>
+
+<?php include 'footer.php' ?>
+
+
+</body>
+
+</html>
