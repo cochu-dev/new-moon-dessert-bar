@@ -33,6 +33,9 @@
 
     <div class="sectionShopping">
       <div class="row">
+        <div class="col-xl-12" id="shopping_headerImg">
+          <img class="rounded mx-auto d-block" style="height: 100px; background-color: rgba(255,0,0,0.1);" src="../img/headerImg.jpg">
+        </div>
         <div class="col-sm-12">
           <h1> Shopping </h1>
           <p>| · Click on the picture to add to the cart · |</p>
