@@ -32,10 +32,10 @@
   <div class="container-fluid">
 
     <div class="sectionShopping">
+      <?php include 'shopping_headerNav.php' ?>
+      
+
       <div class="row">
-        <div class="col-xl-12" id="shopping_headerImg">
-          <img class="rounded mx-auto d-block" style="height: 100px; background-color: rgba(255,0,0,0.1);" src="../img/headerImg.jpg">
-        </div>
         <div class="col-sm-12">
           <h1> Shopping </h1>
           <p>| · Click on the picture to add to the cart · |</p>
@@ -48,13 +48,43 @@
             foreach ($products as $product): 
         ?>
         <div class="col-sm-12 col-lg-6 col-xl-3">
-          <a class="my-img-class" href="addToCart.php?<?=$product['Product_ID']?>">
-            <img class="imgItem" src="../img/<?= $product['Product_Name']; ?>.jpg" alt="<?=$product['Product_Name']?>">
-            <p><?= $product['Product_Name']; ?></p> 
-            <p class="price">&dollar;<?= $product['Product_Price']; ?></p>
-          </a>
+          <div class="my-img-class">
+            <a href="productDetails.php?<?=$product['Product_ID']?>">
+              <img class="imgItem" src="../img/<?= $product['Product_Img']; ?>" alt="<?=$product['Product_Img']?>">
+            </a>
+              <p class="shopping_productName"><?= $product['Product_Name']; ?></p> 
+              <p class="shopping_productPrice">&dollar;<?= $product['Product_Price']; ?></p>
+            
+          </div>
         </div>
         <?php endforeach; ?> 
+      </div>
+
+      <div class="row">
+        <nav class="shopping_pageNav" aria-label="Page navigation">
+              <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                      </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">...</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
+                  </li>
+                  <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                  </li>
+                  </li>
+              </ul>
+          </nav>
       </div>
     </div>
 

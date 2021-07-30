@@ -1,9 +1,9 @@
 <?php
 function connectMysql()
 {
-    $servername = "localhost";
-    $username = "root"; // your username
-    $password = "root"; //your password
+    $servername = "testhost";
+    $username = "myadmin"; // your username
+    $password = "myadmin"; //your password
     $database = "cpsc2030_project";
     $conn = new mysqli($servername, $username, $password, $database);
 // Check connection
@@ -44,6 +44,7 @@ function getProducts($P_ID,$conn){
     }
     return $products;
 }
+
 
 
 

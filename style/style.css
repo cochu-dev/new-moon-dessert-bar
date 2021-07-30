@@ -305,12 +305,15 @@ video {
 
 .sectionShopping img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .sectionShopping h1 {
   margin-top: 5%;
   text-align: center;
-  color: OliveDrab;
+  color: DarkOliveGreen;
+  text-shadow: 1px 1.2px 2px grey;
 }
 
 .sectionShopping h3 {
@@ -318,7 +321,7 @@ video {
   color: OliveDrab;
 }
 
-.sectionShopping p {
-  text-align: center;
+.sectionShopping .shopping_productPrice {
+  color: OliveDrab;
 }
 /*# sourceMappingURL=style.css.map */
