@@ -25,7 +25,6 @@ $result = query_username($conn, $userName);
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $_SESSION['username'] = $userName;
 
     $passWord_hashed = $row["C_Password"];
     $passWord_correct = password_verify($passWord_user, $passWord_hashed);
@@ -45,6 +44,7 @@ if ($result->num_rows > 0) {
          
         //     if($response->success){
         //         echo "Verification success.";
+        //         $_SESSION['username'] = $userName;
         //         header("Location: shopping.php");
         //     } else {
         //         echo "<script> alert('reCAPTHCA verification failed, please try again.');location.href='login.php'; </script>";
@@ -58,6 +58,7 @@ if ($result->num_rows > 0) {
 
         // TODO: delete later
         echo "Verification success.";
+        $_SESSION['username'] = $userName;
         header("Location: ../shopping/shopping.php");
     }
 

@@ -4,6 +4,10 @@
   require_once '../php/connection.php';
   $conn = connectMysql();
   session_start();
+  if(!isset($_SESSION['username'])) {
+      header('Location: ../index.html');
+      exit();
+  }
   ?>
   <head>
     <!-- Required meta tags -->
