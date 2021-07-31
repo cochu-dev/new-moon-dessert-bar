@@ -177,13 +177,18 @@ video {
 
 @media (max-width: 483px) {
   #logInModal .mb-3, #registerModal .mb-3 {
-    width: 100%;
+    width: 90%;
   }
   #logInModal .modal-footer, #registerModal .modal-footer {
     text-align: center;
   }
+  #logInModal .modal-footer div, #registerModal .modal-footer div {
+    margin-bottom: 10px;
+  }
   #logInModal .modal-footer button, #registerModal .modal-footer button {
     width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
