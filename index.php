@@ -19,6 +19,7 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <title>New Moon Dessert Bar</title>
   </head>
 
@@ -30,6 +31,7 @@
   </div>
 
   <body class="index-page">
+    <?php require_once "php/recaptchalib.php" ?>
     <div class="container-fluid">
       <div class="video-container-bg">
         <div class="row navbar-row">
@@ -205,7 +207,7 @@
       
       <!-- LogIn Modal -->
       
-      <div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="logInLabel" aria-hidden="true">
+      <div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="logInLabel" aria-hidden="true" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <form action="php/login.php" method="post">
@@ -217,19 +219,22 @@
               <div class="modal-body">
                   <div class="row">
                       <div class="col-sm-12">
-                          <h3>Please enter your credentials</h3>
+                        <h3>Please enter your credentials</h3>
                       </div>
                   </div>
                   <div class="row">
                       <div class="col-sm-12">
                         <div class="modalFormWrapper">
                             <div class="mb-3">
-                                <label for="forUsername" class="form-label">Your Username</label>
-                                <input type="text" name="username" class="form-control" id="formUsername" placeholder="Username">
+                              <label for="forUsername" class="form-label">Your Username</label>
+                              <input type="text" name="username" class="form-control" id="logInUsername" placeholder="Username">
                             </div>
                             <div class="mb-3">
-                                <label for="forPassword" class="form-label">Your Password</label>
-                                <input type="password" name="password" class="form-control" id="formPassword" placeholder="Password">
+                              <label for="forPassword" class="form-label">Your Password</label>
+                              <input type="password" name="password" class="form-control" id="logInPassword" placeholder="Password">
+                            </div>
+                            <div class="mb-3">
+                              <div class="g-recaptcha myrecaptcha" data-sitekey="6LdDrc8bAAAAAJb0qkGSSgN4YqqeqvzhxDm2KG4i"></div>  
                             </div>
                         </div>
                       </div>
@@ -237,9 +242,53 @@
               </div>
 
               <div class="modal-footer">
-                Does't have an account? <a href="#">Register now!</a>
+                Does't have an account? <a href="#" data-bs-target="#registerModal" data-bs-toggle="modal" data-bs-dismiss="modal">Register now!</a>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Log In</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <form action="php/register.php" method="post">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="registerLabel">register</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-body">
+                  <div class="row">
+                      <div class="col-sm-12">
+                        <h3>Please enter your credentials</h3>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-12">
+                        <div class="modalFormWrapper">
+                            <div class="mb-3">
+                              <label for="forUsername" class="form-label">Your Username</label>
+                              <input type="text" name="username" class="form-control" id="registerUsername" placeholder="Username">
+                            </div>
+                            <div class="mb-3">
+                              <label for="forPassword" class="form-label">Your Password</label>
+                              <input type="password" name="password" class="form-control" id="registerPassword" placeholder="Password">
+                            </div>
+                            <div class="mb-3">
+                              <div class="g-recaptcha myrecaptcha" data-sitekey="6LdDrc8bAAAAAJb0qkGSSgN4YqqeqvzhxDm2KG4i"></div> 
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="modal-footer">
+                Already have an account? <a href="#" data-bs-target="#logInModal" data-bs-toggle="modal" data-bs-dismiss="modal">LogIn here!</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Register</button>
               </div>
             </form>
           </div>

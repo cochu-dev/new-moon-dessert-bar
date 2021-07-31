@@ -8,7 +8,7 @@ $passWord = $_POST['password'];
 $query = "INSERT INTO account(C_ID,C_Password) VALUES('$userName','$passWord')";
 // if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) { 
      
-//         $secretKey   = "6LehX_4aAAAAANIoyIRIYn8QzZtwtE7ytaQ1hgmZ";
+//         $secretKey   = "6LdDrc8bAAAAAGhP99aDPJ2_6O7yrwIUc8yJLaQU";
 //         $responseKey = $_POST['g-recaptcha-response'];
 //         $userIP      = $_SERVER['REMOTE_ADDR'];
 //         $url         = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";

@@ -153,12 +153,16 @@ video {
   display: block;
 }
 
-#logInModal .modal-body h3 {
+#logInModal .modal-body .myrecaptcha div, #registerModal .modal-body .myrecaptcha div {
+  margin: auto;
+}
+
+#logInModal .modal-body h3, #registerModal .modal-body h3 {
   color: OliveDrab;
   text-align: center;
 }
 
-#logInModal .modal-footer a {
+#logInModal .modal-footer a, #registerModal .modal-footer a {
   text-decoration: none;
   margin-left: 5px;
   margin-right: 10px;
