@@ -286,7 +286,7 @@
               </div>
 
               <div class="modal-footer">
-                Already have an account? <a href="#" data-bs-target="#logInModal" data-bs-toggle="modal" data-bs-dismiss="modal">Log In here!</a>
+                <div>Already have an account? <a href="#" data-bs-target="#logInModal" data-bs-toggle="modal" data-bs-dismiss="modal">Log In here!</a></div>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Register</button>
               </div>
