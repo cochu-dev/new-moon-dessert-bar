@@ -263,7 +263,7 @@
               <div class="modal-body">
                   <div class="row">
                       <div class="col-sm-12">
-                        <h3>Please enter your credentials</h3>
+                        <h3>Customer Register</h3>
                       </div>
                   </div>
                   <div class="row">

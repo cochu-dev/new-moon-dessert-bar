@@ -335,11 +335,17 @@ video {
   border-radius: 15px 50px 30px;
 }
 
-.sectionShopping .shopping_headerNav span {
+.sectionShopping .shopping_headerNav #span-shopping-username {
   position: absolute;
   font-size: 2rem;
-  padding-left: 1rem;
-  padding-top: 1rem;
+  left: 1rem;
+  top: 1rem;
   color: white;
+}
+
+.sectionShopping .shopping_headerNav #btn-shopping-logout {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
