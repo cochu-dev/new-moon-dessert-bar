@@ -153,6 +153,11 @@ video {
   display: block;
 }
 
+#logInModal .mb-3, #registerModal .mb-3 {
+  width: 70%;
+  margin: auto;
+}
+
 #logInModal .modal-body .myrecaptcha div, #registerModal .modal-body .myrecaptcha div {
   margin: auto;
 }
@@ -162,10 +167,26 @@ video {
   text-align: center;
 }
 
+#logInModal .modal-footer div, #registerModal .modal-footer div {
+  margin: auto;
+}
+
 #logInModal .modal-footer a, #registerModal .modal-footer a {
   text-decoration: none;
   margin-left: 5px;
   margin-right: 10px;
+}
+
+@media (max-width: 483px) {
+  #logInModal .mb-3, #registerModal .mb-3 {
+    width: 100%;
+  }
+  #logInModal .modal-footer, #registerModal .modal-footer {
+    text-align: center;
+  }
+  #logInModal .modal-footer button, #registerModal .modal-footer button {
+    width: 100%;
+  }
 }
 
 .video-container-bg {

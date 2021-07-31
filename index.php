@@ -242,7 +242,7 @@
               </div>
 
               <div class="modal-footer">
-                Does't have an account? <a href="#" data-bs-target="#registerModal" data-bs-toggle="modal" data-bs-dismiss="modal">Register now!</a>
+                <div>Does't have an account? <a href="#" data-bs-target="#registerModal" data-bs-toggle="modal" data-bs-dismiss="modal">Register now!</a></div>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Log In</button>
               </div>
@@ -286,7 +286,7 @@
               </div>
 
               <div class="modal-footer">
-                Already have an account? <a href="#" data-bs-target="#logInModal" data-bs-toggle="modal" data-bs-dismiss="modal">LogIn here!</a>
+                Already have an account? <a href="#" data-bs-target="#logInModal" data-bs-toggle="modal" data-bs-dismiss="modal">Log In here!</a>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Register</button>
               </div>
