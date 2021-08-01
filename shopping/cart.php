@@ -36,25 +36,25 @@
             
 
             <div class="row">
-                <div class="col-sm-12">
-                    <h1> Shopping Cart </h1>
-                    <p>| ·  · |</p>
+                <div class="col-sm-12" id="shopping_cartTitle">
+                    <h1>Total</h1> <h1>CA$111</h1>
+
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-sm-12">
-                    <form action="shopping.php" method="get">
-                        <table style="margin:auto; border: 2px solid black;">
+                <div class="col-sm-12" id="shopping_cart">
+                    <form action="userInfo.php" method="get">
+                        <table class="cartTable">
                             <thead>
-                                <tr style="margin:auto; border: 2px solid black;">
+                                <!-- <tr style="margin:auto; border: 2px solid black;">
                                     <td>Product</td>
 
                                     <td>Quantity</td>
 
                                     <td>Price</td>
 
-                                </tr>
+                                </tr> -->
                             </thead>
                             <tbody>
 
@@ -63,20 +63,21 @@
 
                                 <?php foreach ($_SESSION['mycar'] as $product): ?>
                                 <tr>
+                                    <td class="cart_quantity">
+                                        <h3> <?=$product['buy_num']?> </h3>
+
+                                    </td>
                                     <td>
-                                        <?=$product['buy_name']?>
+                                        <span> <?=$product['buy_name']?> </span>
                                     </td>
 
-                                    <td class="quantity">
-                                        <?=$product['buy_num']?>
-
-                                    </td>
                                     
-                                    <td>
-                                        &dollar;<?=$product['buy_price']?>
+                                    
+                                    <td class="cart_priceP">
+                                        <span> &dollar;<?=$product['buy_price']?> </span>
                                     </td>
 
-                                    <td>
+                                    <td class="cart_deleteP">
                                         <a href="cart_delProduct.php?id=<?php echo $product['buy_id'];?>">Delete</a></td>
                                     </td>
 
@@ -92,8 +93,8 @@
                         </div>
 
                         <br>
-                        <div class="buttons">
-                            <input type="submit" value="Go Back To shopping!" name="placeorder">
+                        <div class="">
+                            <input type="submit" value="Go To Checkout" name="placeorder">
                         </div>
                         
                         <?php $products = getProducts($_SERVER["QUERY_STRING"],$conn); ?>
