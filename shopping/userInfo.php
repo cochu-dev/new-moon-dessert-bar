@@ -3,7 +3,7 @@
   <?php
   require_once '../php/connection.php';
   $conn = connectMysql();
-  session_start();
+  require_once '../php/logged_in_header.php';
   ?>
   <head>
     <!-- Required meta tags -->
@@ -38,41 +38,41 @@
             <div class="row">
                 <div class="col-sm-12" id="">
                     <h1>My billing address</h1>
-                    <form class="row g-3">
+                    <form class="row g-3" action="../php/saveUserInfo.php" method="post">
                       <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail">
+                        <input type="email" class="form-control" name="email" id="inputEmail">
                       </div>
                       <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Phone</label>
-                        <input type="tel" class="form-control" id="inputPhone" placeholder="123-456-7890" maxlength="12">
+                        <label for="inputPhone4" class="form-label">Phone</label>
+                        <input type="tel" class="form-control" name="phone" id="inputPhone" placeholder="123-456-7890" maxlength="12">
                       </div>
                       <div class="col-12">
                         <label for="inputAddress" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        <input type="text" class="form-control" name="address" id="inputAddress" placeholder="1234 Main St">
                       </div>
                       <div class="col-12">
                         <label for="inputAddress2" class="form-label"></label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                        <input type="text" class="form-control" name="unit" id="inputAddress2" placeholder="Apartment, studio, or floor">
                       </div>
                       <div class="col-md-6">
                         <label for="inputCity" class="form-label">City</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <input type="text" class="form-control" name="city" id="inputCity">
                       </div>
                       <div class="col-md-4">
                         <label for="inputState" class="form-label">State</label>
-                        <select id="inputState" class="form-select">
+                        <select id="inputState" class="form-select" name="country">
                           <option selected>Choose...</option>
                           <option>...</option>
                         </select>
                       </div>
                       <div class="col-md-2">
                         <label for="inputZip" class="form-label">Zip</label>
-                        <input type="text" class="form-control" id="inputZip">
+                        <input type="text" class="form-control" name="zip" id="inputZip">
                       </div>
                       <div class="col-12">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="gridCheck">
+                          <input class="form-check-input" type="checkbox" name="isChecked" id="gridCheck">
                           <label class="form-check-label" for="gridCheck">
                             Check me out
                           </label>
@@ -80,6 +80,11 @@
                       </div>
                       <div class="col-12">
                         <button type="submit" class="btn btn-primary">Save</button>
+                        <?php
+                          if($_GET['error'] === "notChecked") {
+                            echo '<div class="errorFont">Please check the box!</div>';
+                          }
+                        ?>
                       </div>
                     </form>
 

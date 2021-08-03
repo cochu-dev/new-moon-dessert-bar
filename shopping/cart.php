@@ -3,7 +3,7 @@
   <?php
   require_once '../php/connection.php';
   $conn = connectMysql();
-  session_start();
+  require_once '../php/logged_in_header.php';
   ?>
   <head>
     <!-- Required meta tags -->
@@ -94,7 +94,7 @@
 
                         <br>
                         <div class="d-grid gap-2 col-4 mx-auto">
-                            <button class="btn btn-primary cart_button_1" type="button"> &#10094;   Continue Shopping</button>
+                            <a class="btn btn-primary cart_button_1" type="button" href="shopping.php"> &#10094;   Continue Shopping</a>
                             <input class="btn btn-primary cart_button_2" type="submit" value="Go To Checkout" name="placeorder">
                         </div>
                         

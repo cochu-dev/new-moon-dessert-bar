@@ -1,24 +1,10 @@
 <?php
-include 'connection.php';
+require_once 'connection.php';
+require_once 'functions.php';
 $conn = connectMysql();
 session_start();
 $userName = $_POST['username'];
 $passWord_user = $_POST['password'];
-
-function query_username($conn, $uid) {
-    $sql = "Select * From account Where C_ID= ? ";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        return null;
-    }
-
-    mysqli_stmt_bind_param($stmt, "s", $uid);
-    mysqli_stmt_execute($stmt);
-
-    $resultData = mysqli_stmt_get_result($stmt);
-    mysqli_stmt_close($stmt);
-    return $resultData;
-}
 
 $result = query_username($conn, $userName);
 

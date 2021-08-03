@@ -3,7 +3,7 @@
   <?php
   require_once '../php/connection.php';
   $conn = connectMysql();
-  session_start();
+  require_once '../php/logged_in_header.php';
   ?>
   <head>
     <!-- Required meta tags -->
