@@ -45,7 +45,7 @@
     }
 
     function qeury_updateUserInfo($conn, $uid, $email, $phone, $address, $unit, $city, $country, $zip) {
-        $sql = "UPDATE userInfo SET C_EMAIL = ' ? ',C_PHONE = ' ? ',C_ADDRESS = ' ? ',C_UNIT = ' ? ',C_CITY = ' ? ',C_COUNTRY = ' ? ',C_ZIP = ' ? ' WHERE C_ID = ' ? '";
+        $sql = "UPDATE userInfo SET C_EMAIL = ? ,C_PHONE = ? ,C_ADDRESS = ? ,C_UNIT = ? ,C_CITY = ? ,C_COUNTRY = ? ,C_ZIP = ?  WHERE C_ID = ? ";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             return null;
