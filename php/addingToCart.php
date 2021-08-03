@@ -1,6 +1,6 @@
 <?php 
 
-include '../php/connection.php';
+include 'connection.php';
 $conn = connectMysql();
 session_start();
 $product_id = $_GET['product_id'];
@@ -32,5 +32,5 @@ if($_GET[clear]=="yes"){
 
 $_SESSION['mycar'] = $mycar;
 
-header('location: cart.php');
+header('location: ../shopping/cart.php');
 ?>

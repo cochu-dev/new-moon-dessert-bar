@@ -42,7 +42,7 @@
         <div class="col-sm-12">
           <section class="shopping_productDetails">
             <h1><?=$product['Product_Name']?></h1>
-            <form action="addingToCart.php" method="get">
+            <form action="../php/addingToCart.php" method="get">
 
                 <img src="../img/<?= $product['Product_Img'];?>" style="width: 300px; height: 100%; padding:10px; border: 1px solid black;">
                 <h2 style="font-size: 40px;text-transform: uppercase; "></h2>
