@@ -184,6 +184,7 @@
       </div>
 
       <div class="sectionDocumentation" id="index-sectionDocumentation">
+
         <div class="row">
           <div class="col-sm-12">
             <h1>Instruction</h1>
@@ -191,17 +192,13 @@
         </div>
         <p> This is the webpage of a dessert bar.<br>
             People need to log in to order. Before logging in, you can browse the menu page first. On the menu page, you can click to enlarge the picture.<br>
-            There is a login button in the upper right corner of the page. On the login page, if you do not have an account, you should register an account.<br>
+            On the login page, if you do not have an account, you should register an account.<br>
             After logging in, you can click on one of the pictures of desserts, and then select the quantity you want.<br>
-            Unfortunately, I don’t have enough time to complete all the functions of the shopping cart. This website can only display the products that the user has just added.</p>
+        </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.827007455358!2d-123.14033818373676!3d49.22280778293132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867485c515efbb%3A0xf3b09cc69214b862!2s1419%20W%2053rd%20Ave%2C%20Vancouver%2C%20BC%20V6P%201L2!5e0!3m2!1sen!2sca!4v1627983377168!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="footer">
-            <p> @ Created by KCHU · 2021 </p>
-          </div>
-        </div>
-      </div>
+
+      <?php include_once 'footer.php'?>
 
       <!-- Modal -->
       
@@ -306,12 +303,6 @@
       </a>
     </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>-->
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="bootstrap-5.0.1-dist/js/bootstrap.min.js"></script>

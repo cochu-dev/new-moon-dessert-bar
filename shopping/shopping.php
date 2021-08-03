@@ -3,11 +3,7 @@
   <?php
   require_once '../php/connection.php';
   $conn = connectMysql();
-  session_start();
-  if(!isset($_SESSION['username'])) {
-      header('Location: ../index.php');
-      exit();
-  }
+  require_once '../php/logged_in_header.php';
   ?>
   <head>
     <!-- Required meta tags -->
@@ -94,8 +90,8 @@
 
   </div>
 
-  <?php include_once 'footer.php'?>
-
+  <?php include_once '../footer.php'?>
+  
 </body>
 
 </html>

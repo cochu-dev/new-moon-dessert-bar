@@ -11,6 +11,7 @@ body {
   padding: 0;
   height: 100%;
   max-width: 100%;
+  background-color: #edeae8;
 }
 
 div.container {
@@ -192,6 +193,27 @@ video {
   display: block;
 }
 
+.cart_button_1 {
+  color: OliveDrab;
+  border-color: OliveDrab;
+  background-color: transparent;
+}
+
+.cart_button_2 {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: OliveDrab;
+}
+
+.cart_button_1:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.cart_button_2:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 #logInModal .mb-3, #registerModal .mb-3 {
   width: 70%;
   margin: auto;
@@ -354,6 +376,10 @@ video {
   padding: 10px;
 }
 
+.sectionShopping {
+  background-color: #edeae8;
+}
+
 .sectionShopping .row {
   padding-left: 20%;
   padding-right: 20%;
@@ -363,6 +389,14 @@ video {
   margin: 5%;
   padding: 1%;
   border: 1px solid grey;
+}
+
+.sectionShopping .shopping_pageNav a {
+  background-color: #edeae8;
+}
+
+.sectionShopping .shopping_pageNav a:hover {
+  background-color: grey;
 }
 
 .sectionShopping img {
@@ -387,13 +421,45 @@ video {
   color: OliveDrab;
 }
 
-.sectionShopping .shopping_headerNav #headerImg {
+.shopping_headerNav ul {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+.shopping_headerNav ul a {
+  font-size: 1.5rem;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.shopping_headerNav ul a:hover {
+  background-color: rgba(128, 128, 128, 0.7);
+}
+
+.shopping_headerNav ul a:active {
+  color: black;
+}
+
+.shopping_headerNav ul li:first-of-type a {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.shopping_headerNav ul li:last-of-type a {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.shopping_headerNav #headerImg {
+  z-index: -100;
   height: 150px;
   background-color: rgba(255, 0, 0, 0.1);
   border-radius: 15px 50px 30px;
 }
 
-.sectionShopping .shopping_headerNav #span-shopping-username {
+.shopping_headerNav #span-shopping-username {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
   position: absolute;
   font-size: 1.5rem;
   left: 1rem;
@@ -401,13 +467,13 @@ video {
   color: white;
 }
 
-.sectionShopping .shopping_headerNav #btn-shopping-logout {
+.shopping_headerNav #btn-shopping-logout {
   position: absolute;
   right: 1rem;
   top: 1rem;
 }
 
-#span-shopping-username {
+#span-shopping-username:before {
   font-family: 'FontAwesome';
   content: '\f2be';
 }

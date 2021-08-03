@@ -1,21 +1,44 @@
-.sectionShopping
-    .shopping_headerNav #headerImg
+
+.shopping_headerNav
+    ul
+        background-color: $transparent
+        border: none
+        a
+            font-size: 1.5rem
+            color: black
+            background-color: rgba(255,255,255,0.7)
+        a:hover
+            background-color: rgba(128,128,128,0.7)
+        a:active
+            color: black
+        li:first-of-type
+            a
+                border-top-left-radius: 6px
+                border-top-right-radius: 6px
+        li:last-of-type
+            a
+                border-bottom-left-radius: 6px
+                border-bottom-right-radius: 6px
+    #headerImg
+        z-index: -100
         height: 150px
         background-color: rgba(255,0,0,0.1)
         border-radius: 15px 50px 30px    
-
-    .shopping_headerNav #span-shopping-username 
+    #span-shopping-username 
+        background-color: $transparent
+        border: none
         position: absolute
         font-size: 1.5rem
         left: 1rem
         top: 1rem
         color: white
-    
-    .shopping_headerNav #btn-shopping-logout 
+    // #span-shopping-username:active
+    //     outline: none
+    #btn-shopping-logout 
         position: absolute
         right: 1rem
         top: 1rem
 
-#span-shopping-username
+#span-shopping-username:before
     font-family: 'FontAwesome'
     content: '\f2be'

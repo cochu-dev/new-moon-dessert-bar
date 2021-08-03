@@ -93,8 +93,9 @@
                         </div>
 
                         <br>
-                        <div class="">
-                            <input type="submit" value="Go To Checkout" name="placeorder">
+                        <div class="d-grid gap-2 col-4 mx-auto">
+                            <button class="btn btn-primary cart_button_1" type="button"> &#10094;   Continue Shopping</button>
+                            <input class="btn btn-primary cart_button_2" type="submit" value="Go To Checkout" name="placeorder">
                         </div>
                         
                         <?php $products = getProducts($_SERVER["QUERY_STRING"],$conn); ?>
@@ -104,8 +105,9 @@
             
         </div>
 
-    <?php include '../footer.html' ?>
+    
     </div>
+    <?php include '../footer.php' ?>
 </body>
 
 </html>
