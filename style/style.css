@@ -35,6 +35,10 @@ video {
   color: red;
 }
 
+.successFont {
+  color: green;
+}
+
 .index-page {
   background-color: #edeae8;
 }

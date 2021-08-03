@@ -44,7 +44,7 @@
 
             <div class="row">
                 <div class="col-sm-12" id="shopping_cart">
-                    <form action="userInfo.php" method="get">
+                    <form action="cart.php" method="get">
                         <table class="cartTable">
                             <thead>
                                 <!-- <tr style="margin:auto; border: 2px solid black;">

@@ -58,4 +58,19 @@
         mysqli_stmt_close($stmt);
         return $error;
     }
+
+    function query_getUserInfo($conn, $uid) {
+        $sql = "Select * From userInfo Where C_ID= ? ";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)) {
+            return null;
+        }
+
+        mysqli_stmt_bind_param($stmt, "s", $uid);
+        mysqli_stmt_execute($stmt);
+
+        $resultData = mysqli_stmt_get_result($stmt);
+        mysqli_stmt_close($stmt);
+        return $resultData;
+    }
 ?>
