@@ -37,14 +37,20 @@
 
             <div class="row">
                 <div class="col-sm-12" id="shopping_cartTitle">
-                    <h1>Total</h1> <h1>CA$111</h1>
+                    <?php 
+                        $totalprice = 0;
+                        foreach ($_SESSION['mycar'] as $product):
+                            $totalprice += $product['buy_price'];
+                        endforeach;
+                    ?>
+                    <h1>Total</h1> <h1>CA$<?php echo $totalprice?></h1>
 
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-sm-12" id="shopping_cart">
-                    <form action="cart.php" method="get">
+                    <form action="checkout.php" method="get">
                         <table class="cartTable">
                             <thead>
                                 <!-- <tr style="margin:auto; border: 2px solid black;">

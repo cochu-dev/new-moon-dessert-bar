@@ -9,7 +9,7 @@
                 <ul class="dropdown-menu" aria-labelledby="span-shopping-username">
                     <li><a class="dropdown-item" href="shopping.php">Shopping</a></li>
                     <li><a class="dropdown-item" href="cart.php">My Cart</a></li>
-                    <li><a class="dropdown-item" href="userInfo.php">My billing address</a></li>
+                    <li><a class="dropdown-item" href="userInfo.php">My Shipping Address</a></li>
                 </ul>
             </div>
             <form action="../php/logout.php" method="post">

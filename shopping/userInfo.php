@@ -40,7 +40,7 @@
 
             <div class="row">
                 <div class="col-sm-12" id="">
-                    <h1>My billing address</h1>
+                    <h1>My Shipping Address</h1>
                     <form class="row g-3" action="../php/saveUserInfo.php" method="post">
                       <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Email</label>

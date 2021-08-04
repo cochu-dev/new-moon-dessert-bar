@@ -388,6 +388,10 @@ video {
   background-color: #edeae8;
 }
 
+.sectionShopping div.customerInformation {
+  text-align: center;
+}
+
 .sectionShopping .row {
   padding-left: 20%;
   padding-right: 20%;
@@ -484,6 +488,12 @@ video {
 #span-shopping-username:before {
   font-family: 'FontAwesome';
   content: '\f2be';
+}
+
+@media (max-width: 748px) {
+  .shopping_headerNav div.row {
+    padding: 0;
+  }
 }
 
 .sectionShopping #shopping_cartTitle, .sectionShopping .cartTable {
