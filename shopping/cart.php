@@ -99,7 +99,7 @@
                         </div>
 
                         <br>
-                        <div class="d-grid gap-2 col-4 mx-auto">
+                        <div class="d-grid gap-2 col-lg-4 mx-auto">
                             <a class="btn btn-primary cart_button_1" type="button" href="shopping.php"> &#10094;   Continue Shopping</a>
                             <input class="btn btn-primary cart_button_2" type="submit" value="Go To Checkout" name="placeorder">
                         </div>

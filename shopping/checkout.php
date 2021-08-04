@@ -36,6 +36,91 @@
         <div class="sectionShopping">
             <?php include 'shopping_headerNav.php' ?>
             <h1>Checkout</h1>
+            <div class="row customerInformation">
+                <div class="col"></div>
+                <div class="col-sm-4">
+                    <h2>Customer Information</h2>
+                    <label>Full Name:</label>
+                    <label><?php echo $_SESSION['username']?></label>
+                    <br>
+                    <label>Email:</label>
+                    <label><?php echo $row["C_EMAIL"]?></label>
+                    <br>
+                    <label>Phone #:</label>
+                    <label><?php echo $row["C_PHONE"]?></label>
+                    <br>
+                    <label>Full Address:</label>
+                    <br>
+                    <label><?php echo $row["C_UNIT"]?>, <?php echo $row["C_ADDRESS"]?></label>
+                    <br>
+                    <label><?php echo $row["C_CITY"]?>, <?php echo $row["C_ZIP"]?></label>
+                    <br>
+                    <label><?php echo $row["C_COUNTRY"]?></label>
+                    <br>
+                </div>
+                <div class="col"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12" id="shopping_cartTitle">
+                    <?php 
+                        $totalprice = 0;
+                        foreach ($_SESSION['mycar'] as $product):
+                            $totalprice += $product['buy_price'];
+                        endforeach;
+                    ?>
+                    <h1>Total</h1> <h1>CA$<?php echo $totalprice?></h1>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="cartTable">
+                        <thead>
+                            <!-- <tr style="margin:auto; border: 2px solid black;">
+                                <td>Product</td>
+
+                                <td>Quantity</td>
+
+                                <td>Price</td>
+
+                            </tr> -->
+                        </thead>
+                        <tbody>
+
+
+                        <?php $totalprice = 0;?>
+
+                            <?php foreach ($_SESSION['mycar'] as $product): ?>
+                            <tr>
+                                <td class="cart_quantity">
+                                    <h3> <?=$product['buy_num']?> </h3>
+
+                                </td>
+                                <td>
+                                    <span> <?=$product['buy_name']?> </span>
+                                </td>
+
+                                
+                                
+                                <td class="cart_priceP">
+                                    <span> &dollar;<?=$product['buy_price']?> </span>
+                                </td>
+
+                            </tr>
+                            <?php $totalprice += $product['buy_price']?>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+
+                    <br>
+                    <div class="subtotal">
+                        <span class="text" style="font-weight: 1em; font-family: cursive;">Subtotal: &dollar;<span><?= $totalprice ?></span></span>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
 
