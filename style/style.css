@@ -215,25 +215,26 @@ video {
   float: right;
   border-radius: 50%;
   margin-right: 20px;
+  z-index: 999;
 }
 
-.cart_button_1, .checkout_back_button, .productDetail_back_button {
+.back_button, .cart_button_1, .checkout_back_button, .productDetail_back_button {
   color: OliveDrab;
   border-color: OliveDrab;
   background-color: transparent;
 }
 
-.cart_button_2, .checkout_confirm_button, .productDetail_add_button {
+.forward_button, .cart_button_2, .checkout_confirm_button, .productDetail_add_button {
   border-color: rgba(255, 255, 255, 0.3);
   background-color: OliveDrab;
 }
 
-.cart_button_1:hover, .checkout_back_button:hover, .productDetail_back_button:hover {
+.back_button:hover, .cart_button_1:hover, .checkout_back_button:hover, .productDetail_back_button:hover {
   border-color: rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.cart_button_2:hover, .checkout_confirm_button:hover, .productDetail_add_button:hover {
+.forward_button:hover, .cart_button_2:hover, .checkout_confirm_button:hover, .productDetail_add_button:hover {
   border-color: rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -290,6 +291,43 @@ video {
     margin-left: 10%;
     margin-right: 10%;
   }
+}
+
+#offcanvasCart .offcanvas-header h5 {
+  color: OliveDrab;
+}
+
+#offcanvasCart .offcanvas-body {
+  margin-top: 5%;
+}
+
+#offcanvasCart .offcanvas-body .cartTable {
+  margin: auto;
+}
+
+#offcanvasCart .offcanvas-body .cart_priceP {
+  text-align: right;
+}
+
+#offcanvasCart .offcanvas-body .cart_deleteP {
+  text-align: right;
+}
+
+#offcanvasCart .offcanvas-body .cart_deleteP a {
+  color: black;
+  font-size: 1.3rem;
+  font-family: cursive;
+  text-decoration: none;
+}
+
+#offcanvasCart .offcanvas-body .back_button, #offcanvasCart .offcanvas-body .forward_button {
+  height: 100%;
+  width: 90%;
+}
+
+#offcanvasCart .offcanvas-body .back-col, #offcanvasCart .offcanvas-body .forward-col {
+  display: inline-block;
+  text-align: center;
 }
 
 .video-container-bg {
@@ -638,21 +676,5 @@ video {
   font-size: 3.2rem;
   font-weight: bold;
   color: oliveDrab;
-}
-
-.wrapper_shopping div.container-fluid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-
-.wrapper_shopping div.container-fluid a, .wrapper_shopping div.container-fluid a:hover, .wrapper_shopping div.container-fluid a:focus {
-  color: OliveDrab;
-  text-decoration: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 /*# sourceMappingURL=style.css.map */

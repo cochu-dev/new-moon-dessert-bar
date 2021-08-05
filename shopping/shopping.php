@@ -26,9 +26,6 @@
     />
     <title>New Moon Dessert Bar</title>
 
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
   </head>
 
 <body class="shopping_body">
@@ -66,14 +63,14 @@
         </div>
 
         <div class="row">
-          <nav class="shopping_pageNav" aria-label="Page navigation">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item">.toggleClass
+              <nav class="shopping_pageNav" aria-label="Page navigation">
+                <ul class="pagination justify-content-center" >
+                    <li class="page-item">
                         <a class="page-link" href="#" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
-                    <li class="page-item">
+                    <li class="page-item" >
                       <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
                     </li>
                     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -96,24 +93,81 @@
     
 
       <div class="my-floating-btn active " id="shopping-my-floating-btn">
-          <button type="button" class="btn btn-lg my-btn btn-floating" id="sidebarCollapse">
+          <button type="button" class="btn btn-lg my-btn btn-floating" id="sidebarCollapse" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasRight">
               <i class="fa fa-shopping-cart"></i>
             </button>
       </div>
 
+      <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">Toggle right offcanvas</button> -->
 
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
         <div class="offcanvas-header">
-          <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+          <h5 id="offcanvasCartLabel">Shopping Cart</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          ...
+          <div class="row">
+              <div class="col-sm-12 shopping_cart">
+                  <form action="checkout.php" method="get">
+                      <table class="cartTable">
+                          <tbody>
+                              <?php $totalprice = 0;?>
+
+                              <?php foreach ($_SESSION['mycar'] as $product): ?>
+                              <tr>
+                                  <td class="cart_quantity">
+                                      <h3> <?=$product['buy_num']?> </h3>
+
+                                  </td>
+
+                                  <td class="cart_img">
+                                      <img src="../img/<?=$product['buy_img'];?>" style="width: 70px; padding:5px; border: 1px solid black;">
+                                  </td>
+
+                                  <td>
+                                      <span> <?=$product['buy_name']?> </span>
+                                  </td>
+
+                                  <td class="cart_priceP">
+                                      <span> &dollar;<?=$product['buy_price']?> </span>
+                                  </td>
+
+                                  <td class="cart_deleteP">
+                                      <a href="../php/cart_delProduct.php?id=<?php echo $product['buy_id'];?>">Delete</a></td>
+                                  </td>
+
+                              </tr>
+                              <?php $totalprice += $product['buy_price']?>
+                              <?php endforeach; ?>
+
+                          </tbody>
+                          
+                      </table>
+
+                      <br>
+                      
+
+                      <br>
+                      <div class="d-grid gap-2 col-lg-12 mx-auto">
+                        <div class="row">
+                          <div class="col-sm-6 back-col">
+                            <a class="btn btn-primary back_button" type="button" href="shopping.php"> &#10094;   Continue Shopping</a>
+                          </div>
+                          <div class="col-sm-6 forward-col">
+                            <input class="btn btn-primary forward_button" type="submit" value="Go To Checkout" name="placeorder">
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <?php $products = getProducts($_SERVER["QUERY_STRING"],$conn); ?>
+                  </form>
+              </div>
+          </div>
         </div>
       </div>
 
       <!-- Sidebar  -->
-      <nav id="sidebar">
+      <!-- <nav id="sidebar">
           <div class="sidebar-header">
               <h3>Shopping Cart</h3>
           </div>
@@ -167,27 +221,11 @@
                   <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
               </li>
           </ul>
-      </nav>
+      </nav> -->
     </div>
   </div>
   <?php include_once '../footer.php'?>
-  
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-    </script>
-
-    <?php include_once '../scripts.php' ?>
+  <?php include_once '../scripts.php'?>
 
 </body>
 

@@ -53,8 +53,6 @@
                     <form action="checkout.php" method="get">
                         <table class="cartTable">
                             <tbody>
-
-
                                 <?php $totalprice = 0;?>
 
                                 <?php foreach ($_SESSION['mycar'] as $product): ?>

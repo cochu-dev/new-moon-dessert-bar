@@ -304,6 +304,6 @@
     </div>
 
     
-  <?php include_once 'scripts.php' ?>
+    <?php include_once 'scripts.php' ?>
   </body>
 </html>
