@@ -126,6 +126,7 @@ video {
 .shopping-footer {
   background-color: grey;
   padding-left: 10%;
+  margin-top: 2%;
 }
 
 .shopping-footer h1 {
@@ -181,9 +182,6 @@ video {
 
 .my-floating-btn {
   display: none;
-  top: 90%;
-  width: 100%;
-  position: fixed;
 }
 
 .my-floating-btn a {
@@ -191,33 +189,51 @@ video {
   text-decoration: none;
 }
 
-.my-floating-btn button {
+.my-floating-btn.active {
+  display: block;
+}
+
+#index-my-floating-btn {
+  top: 90%;
+  width: 100%;
+  position: fixed;
+}
+
+#index-my-floating-btn button {
   float: right;
   border-radius: 50%;
   margin-right: 20px;
 }
 
-.my-floating-btn.active {
-  display: block;
+#shopping-my-floating-btn {
+  top: 90%;
+  width: 100%;
+  position: fixed;
 }
 
-.cart_button_1 {
+#shopping-my-floating-btn button {
+  float: right;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.cart_button_1, .checkout_back_button, .productDetail_back_button {
   color: OliveDrab;
   border-color: OliveDrab;
   background-color: transparent;
 }
 
-.cart_button_2 {
+.cart_button_2, .checkout_confirm_button, .productDetail_add_button {
   border-color: rgba(255, 255, 255, 0.3);
   background-color: OliveDrab;
 }
 
-.cart_button_1:hover {
+.cart_button_1:hover, .checkout_back_button:hover, .productDetail_back_button:hover {
   border-color: rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.cart_button_2:hover {
+.cart_button_2:hover, .checkout_confirm_button:hover, .productDetail_add_button:hover {
   border-color: rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -242,6 +258,21 @@ video {
 
 #logInModal .modal-footer a, #registerModal .modal-footer a {
   text-decoration: none;
+}
+
+#checkoutModal h1 {
+  text-align: center;
+}
+
+#checkoutModal .checkMarkIcon {
+  text-align: center;
+  color: green;
+  font-size: 1200%;
+}
+
+#checkoutModal .checkMarkIcon:before {
+  font-family: 'FontAwesome';
+  content: '\f058';
 }
 
 @media (max-width: 483px) {
@@ -388,10 +419,6 @@ video {
   background-color: #edeae8;
 }
 
-.sectionShopping div.customerInformation {
-  text-align: left;
-}
-
 .sectionShopping .row {
   padding-left: 20%;
   padding-right: 20%;
@@ -427,6 +454,39 @@ video {
 .sectionShopping h3 {
   text-align: center;
   color: OliveDrab;
+}
+
+.sectionShopping .shopping_productDetails div.row {
+  padding: 0;
+}
+
+.sectionShopping .shopping_productDetails .productDetail-col div.row:first-of-type {
+  margin-bottom: 15%;
+}
+
+.sectionShopping .shopping_productDetails .productDetail-col div.row:first-of-type h2 {
+  color: OliveDrab;
+}
+
+.sectionShopping .shopping_productDetails .productDetail-col div.row:nth-child(2) {
+  margin-bottom: 15%;
+}
+
+.sectionShopping .shopping_productDetails .productDetail-col div.row:last-of-type {
+  margin-top: 2%;
+}
+
+.sectionShopping .shopping_productDetails .productDetail-col div.quantity {
+  display: inline-block;
+  text-align: right;
+}
+
+.sectionShopping .shopping_productDetails .productDetail-col div.quantity input {
+  height: 100%;
+}
+
+.sectionShopping .shopping_productDetails .productDetail-col a.productDetail_back_button, .sectionShopping .shopping_productDetails .productDetail-col input.productDetail_add_button {
+  width: 100%;
 }
 
 .sectionShopping .shopping_productPrice {
@@ -480,7 +540,7 @@ video {
 }
 
 .shopping_headerNav #btn-shopping-logout {
-  position: absolute;
+  position: fixed;
   right: 1rem;
   top: 1rem;
 }
@@ -528,5 +588,71 @@ video {
 
 .sectionShopping #shopping_cart .cart_deleteP {
   text-align: right;
+}
+
+.sectionShopping #shopping_cart .cart_deleteP a {
+  color: black;
+  font-size: 1.3rem;
+  font-family: cursive;
+  text-decoration: none;
+}
+
+.sectionShopping div.checkoutProduct, .sectionShopping table.checkoutTable {
+  width: 100%;
+  height: 100%;
+  text-align: justify;
+}
+
+.sectionShopping div.checkoutProduct:after, .sectionShopping table.checkoutTable:after {
+  content: "";
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.sectionShopping div.checkoutProduct table.checkoutTable .tr_title {
+  font-family: "Slabo";
+}
+
+.sectionShopping div.customerInformation {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.sectionShopping div.customerInformation div.customer-col {
+  border: 1px solid grey;
+  margin: 20px 0px;
+}
+
+.sectionShopping div.checkoutComfirm div.customer-col {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.sectionShopping div.checkoutSubtotal div.customer-col {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.sectionShopping div.checkoutSubtotal div.customer-col span.checkout_subtotalPrice {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: oliveDrab;
+}
+
+.wrapper_shopping div.container-fluid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.wrapper_shopping div.container-fluid a, .wrapper_shopping div.container-fluid a:hover, .wrapper_shopping div.container-fluid a:focus {
+  color: OliveDrab;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 /*# sourceMappingURL=style.css.map */

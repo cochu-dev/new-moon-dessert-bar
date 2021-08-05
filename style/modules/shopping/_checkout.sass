@@ -1,0 +1,43 @@
+.sectionShopping
+
+    div.checkoutProduct, table.checkoutTable
+        width: 100%
+        height: 100%
+        text-align: justify
+
+    div.checkoutProduct:after, table.checkoutTable:after
+        content: ""
+        display: inline-block
+        overflow: hidden
+        width: 100%
+
+    div.checkoutProduct
+        table.checkoutTable .tr_title
+            font-family: $font-slabo
+
+
+    div.customerInformation
+
+        margin-top: 10px
+        text-align: left
+
+        div.customer-col
+            border: 1px solid grey
+            margin: 20px 0px
+
+    div.checkoutComfirm
+
+        div.customer-col
+            text-align: right
+            margin-bottom: 20px
+
+    div.checkoutSubtotal
+
+        div.customer-col
+            text-align: right
+            margin-bottom: 20px
+
+            span.checkout_subtotalPrice
+                font-size: 3.2rem
+                font-weight: bold
+                color: oliveDrab

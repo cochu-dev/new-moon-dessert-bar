@@ -1,7 +1,6 @@
 
 .sectionShopping
-    div.customerInformation
-        text-align: left
+    
     background-color: $index-background-color
     .row
         padding-left: 20%
@@ -31,6 +30,25 @@
         text-align: center
         color: OliveDrab
 
+    .shopping_productDetails
+        div.row
+            padding: 0
+        .productDetail-col
+            div.row:first-of-type
+                h2
+                  color: OliveDrab  
+                margin-bottom: 15%
+            div.row:nth-child(2)
+                margin-bottom: 15%
+            div.row:last-of-type
+                margin-top: 2%
+            div.quantity
+                display: inline-block
+                text-align: right
+                input
+                    height: 100%
+            a.productDetail_back_button,input.productDetail_add_button
+                width: 100%
     .shopping_productPrice
         color: OliveDrab
     

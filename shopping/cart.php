@@ -52,20 +52,10 @@
                 <div class="col-sm-12" id="shopping_cart">
                     <form action="checkout.php" method="get">
                         <table class="cartTable">
-                            <thead>
-                                <!-- <tr style="margin:auto; border: 2px solid black;">
-                                    <td>Product</td>
-
-                                    <td>Quantity</td>
-
-                                    <td>Price</td>
-
-                                </tr> -->
-                            </thead>
                             <tbody>
 
 
-                            <?php $totalprice = 0;?>
+                                <?php $totalprice = 0;?>
 
                                 <?php foreach ($_SESSION['mycar'] as $product): ?>
                                 <tr>
@@ -73,30 +63,33 @@
                                         <h3> <?=$product['buy_num']?> </h3>
 
                                     </td>
+
+                                    <td class="cart_img">
+                                        <img src="../img/<?=$product['buy_img'];?>" style="width: 70px; padding:5px; border: 1px solid black;">
+                                    </td>
+
                                     <td>
                                         <span> <?=$product['buy_name']?> </span>
                                     </td>
 
-                                    
-                                    
                                     <td class="cart_priceP">
                                         <span> &dollar;<?=$product['buy_price']?> </span>
                                     </td>
 
                                     <td class="cart_deleteP">
-                                        <a href="cart_delProduct.php?id=<?php echo $product['buy_id'];?>">Delete</a></td>
+                                        <a href="../php/cart_delProduct.php?id=<?php echo $product['buy_id'];?>">Delete</a></td>
                                     </td>
 
                                 </tr>
                                 <?php $totalprice += $product['buy_price']?>
                                 <?php endforeach; ?>
+
                             </tbody>
+                            
                         </table>
 
                         <br>
-                        <div class="subtotal">
-                            <span class="text" style="font-weight: 1em; font-family: cursive;">Subtotal: &dollar;<span><?= $totalprice ?></span></span>
-                        </div>
+                        
 
                         <br>
                         <div class="d-grid gap-2 col-lg-4 mx-auto">
@@ -110,10 +103,10 @@
             </div>
             
         </div>
-
     
     </div>
-    <?php include '../footer.php' ?>
+    <?php include_once '../footer.php' ?>
+    <?php include_once '../scripts.php' ?>
 </body>
 
 </html>

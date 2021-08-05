@@ -43,18 +43,42 @@
           <section class="shopping_productDetails">
             <h1><?=$product['Product_Name']?></h1>
             <form action="../php/addingToCart.php" method="get">
-
-                <img src="../img/<?= $product['Product_Img'];?>" style="width: 300px; height: 100%; padding:10px; border: 1px solid black;">
-                <h2 style="font-size: 40px;text-transform: uppercase; "></h2>
-                <h2>Price: &dollar;<?=$product['Product_Price']?></h3>
-
-                <h3>Quantity: <input type="number" name="quantity" value="1" min="1" max="20" placeholder="Quantity" required>
-
-                <input type="submit" value="Add To Cart"></h3>
-
-                <input type="hidden" name="product_id" value="<?=$product['Product_ID']?>">
-                <input type="hidden" name="product_name" value="<?=$product['Product_Name']?>">
-                <input type="hidden" name="product_price" value="<?=$product['Product_Price']?>">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="../img/<?=$product['Product_Img'];?>" style="width: 300px; height: 100%; padding:10px; border: 1px solid black;">
+                </div>
+                <div class="col-sm-3"></div>
+                <div class="col-sm-5 productDetail-col">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h2>Price: &dollar;<?=$product['Product_Price']?></h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <h3>Quantity: </h3>
+                    </div>
+                    <div class="col-sm-8 quantity">
+                      <input type="number" name="quantity" value="1" min="1" max="20" placeholder="Quantity" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <a class="btn btn-primary productDetail_back_button" type="button" href="shopping.php">Back To Shopping</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <input class="btn btn-primary productDetail_add_button" type="submit" value="Add To Cart">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 style="font-size: 40px;text-transform: uppercase; "></h2>
+              <input type="hidden" name="product_id" value="<?=$product['Product_ID']?>">
+              <input type="hidden" name="product_name" value="<?=$product['Product_Name']?>">
+              <input type="hidden" name="product_price" value="<?=$product['Product_Price']?>">
+              <input type="hidden" name="product_img" value="<?=$product['Product_Img']?>">
 
             </form>
           </section>
@@ -69,6 +93,7 @@
   </div>
 
   <?php include_once '../footer.php'?>
+  <?php include_once '../scripts.php' ?>
 
 </body>
 
