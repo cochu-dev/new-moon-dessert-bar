@@ -44,7 +44,7 @@
                             $totalprice += $product['buy_price'];
                         endforeach;
                     ?>
-                    <h1>Comfirm Order</h1> 
+                    <h1>Confirm Order</h1> 
 
                 </div>
             </div>
