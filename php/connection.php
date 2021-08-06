@@ -2,8 +2,8 @@
 function connectMysql()
 {
     $servername = "testhost";
-    $username = "myadmin"; // your username
-    $password = "myadmin"; //your password
+    $username = "newmoon"; // your username
+    $password = "newmoon"; //your password
     $database = "cpsc2030_project";
     $conn = new mysqli($servername, $username, $password, $database);
 // Check connection
