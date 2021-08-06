@@ -106,6 +106,25 @@
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
+
+          <div class="row shopping_cartTitle">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-3">
+                <h2>Total</h2>
+              </div>
+              <div class="col-sm-4"></div>
+              <div class="col-sm-4">
+                  <?php 
+                      $totalprice = 0;
+                      foreach ($_SESSION['mycar'] as $product):
+                          $totalprice += $product['buy_price'];
+                      endforeach;
+                  ?>
+                  <h2>CA$<?php echo $totalprice?></h2>
+
+              </div>
+          </div>
+
           <div class="row">
               <div class="col-sm-12 shopping_cart">
                   <form action="checkout.php" method="get">
@@ -151,7 +170,6 @@
                       <div class="d-grid gap-2 col-lg-12 mx-auto">
                         <div class="row">
                           <div class="col-sm-6 back-col">
-                            <a class="btn btn-primary back_button" type="button" href="shopping.php"> &#10094;   Continue Shopping</a>
                           </div>
                           <div class="col-sm-6 forward-col">
                             <input class="btn btn-primary forward_button" type="submit" value="Go To Checkout" name="placeorder">
@@ -166,62 +184,7 @@
         </div>
       </div>
 
-      <!-- Sidebar  -->
-      <!-- <nav id="sidebar">
-          <div class="sidebar-header">
-              <h3>Shopping Cart</h3>
-          </div>
 
-          <ul class="list-unstyled components">
-              <p></p>
-              <li class="active">
-                  <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                  <ul class="collapse list-unstyled" id="homeSubmenu">
-                      <li>
-                          <a href="#">Home 1</a>
-                      </li>
-                      <li>
-                          <a href="#">Home 2</a>
-                      </li>
-                      <li>
-                          <a href="#">Home 3</a>
-                      </li>
-                  </ul>
-              </li>
-              <li>
-                  <a href="#">About</a>
-              </li>
-              <li>
-                  <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                  <ul class="collapse list-unstyled" id="pageSubmenu">
-                      <li>
-                          <a href="#">Page 1</a>
-                      </li>
-                      <li>
-                          <a href="#">Page 2</a>
-                      </li>
-                      <li>
-                          <a href="#">Page 3</a>
-                      </li>
-                  </ul>
-              </li>
-              <li>
-                  <a href="#">Portfolio</a>
-              </li>
-              <li>
-                  <a href="#">Contact</a>
-              </li>
-          </ul>
-
-          <ul class="list-unstyled CTAs">
-              <li>
-                  <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
-              </li>
-              <li>
-                  <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
-              </li>
-          </ul>
-      </nav> -->
     </div>
   </div>
   <?php include_once '../footer.php'?>

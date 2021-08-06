@@ -239,6 +239,11 @@ video {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.back_button:hover, .cart_button_1:hover, .checkout_back_button:hover, .productDetail_back_button:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 #logInModal .mb-3, #registerModal .mb-3 {
   width: 70%;
   margin: auto;
@@ -299,6 +304,10 @@ video {
 
 #offcanvasCart .offcanvas-body {
   margin-top: 5%;
+}
+
+#offcanvasCart .offcanvas-body .shopping_cartTitle h2 {
+  color: OliveDrab;
 }
 
 #offcanvasCart .offcanvas-body .cartTable {
@@ -574,7 +583,7 @@ video {
   font-size: 1.5rem;
   left: 1rem;
   top: 1rem;
-  color: white;
+  color: WhiteSmoke;
 }
 
 .shopping_headerNav #btn-shopping-logout {
@@ -592,6 +601,30 @@ video {
   .shopping_headerNav div.row {
     padding: 0;
   }
+}
+
+footer.shopping-footer {
+  background-color: DimGrey;
+}
+
+footer.shopping-footer h4 {
+  color: WhiteSmoke;
+  font-family: "Mukta Malar";
+}
+
+footer.shopping-footer ul li {
+  color: Silver;
+  font-family: "Mukta Malar";
+  font-size: 0.9rem;
+}
+
+footer.shopping-footer ul li:hover {
+  color: WhiteSmoke;
+}
+
+footer.shopping-footer ul.language {
+  -webkit-column-width: 10px;
+  -webkit-column-count: 3;
 }
 
 .sectionShopping #shopping_cartTitle, .sectionShopping .cartTable {
@@ -676,5 +709,13 @@ video {
   font-size: 3.2rem;
   font-weight: bold;
   color: oliveDrab;
+}
+
+a.page-link {
+  color: DarkOliveGreen;
+}
+
+a.page-link:hover {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
