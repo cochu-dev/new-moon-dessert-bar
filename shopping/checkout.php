@@ -30,7 +30,7 @@
     <title>New Moon Dessert Bar</title>
   </head>
 
-<body>
+<body class="shopping_body">
 
     <div class="container-fluid">
         <div class="sectionShopping">
