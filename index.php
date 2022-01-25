@@ -195,7 +195,7 @@
             On the login page, if you do not have an account, you should register an account.<br>
             After logging in, you can click on one of the pictures of desserts, and then select the quantity you want.<br>
         </p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.827007455358!2d-123.14033818373676!3d49.22280778293132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867485c515efbb%3A0xf3b09cc69214b862!2s1419%20W%2053rd%20Ave%2C%20Vancouver%2C%20BC%20V6P%201L2!5e0!3m2!1sen!2sca!4v1627983377168!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41696.06585458326!2d-123.15978880229281!3d49.21944903370142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486746f412563f7%3A0x36606d221509fdfe!2sLangara%20College!5e0!3m2!1sen!2sca!4v1635067240710!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
 
       <?php include_once 'footer.php'?>
